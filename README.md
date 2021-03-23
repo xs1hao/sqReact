@@ -48,20 +48,20 @@
 			3.接收到的props不同：
 						一般组件：写组件标签时传递了什么，就能收到什么
 						路由组件：接收到三个固定的属性
-											history:
-														go: ƒ go(n)
-														goBack: ƒ goBack()
-														goForward: ƒ goForward()
-														push: ƒ push(path, state)
-														replace: ƒ replace(path, state)
-											location:
-														pathname: "/about"
-														search: ""
-														state: undefined
-											match:
-														params: {}
-														path: "/about"
-														url: "/about"
+                                history:
+                                            go: ƒ go(n)
+                                            goBack: ƒ goBack()
+                                            goForward: ƒ goForward()
+                                            push: ƒ push(path, state)
+                                            replace: ƒ replace(path, state)
+                                location:
+                                            pathname: "/about"
+                                            search: ""
+                                            state: undefined
+                                match:
+                                            params: {}
+                                            path: "/about"
+                                            url: "/about"
 
 ## 五、NavLink与封装NavLink
 				1.NavLink可以实现路由链接的高亮，通过activeClassName指定样式名

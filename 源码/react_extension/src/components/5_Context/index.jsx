@@ -14,7 +14,9 @@ export default class A extends Component {
 			<div className="parent">
 				<h3>我是A组件</h3>
 				<h4>我的用户名是:{username}</h4>
-				<Provider value={{username,age}}>
+                
+                {/* 可以传递多个值 */}
+				<Provider value={{username,age}}> 
 					<B/>
 				</Provider>
 			</div>
@@ -47,6 +49,7 @@ class B extends Component {
 	}
 } */
 
+// 函数式组件
 function C(){
 	return (
 		<div className="grand">

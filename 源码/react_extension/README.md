@@ -194,10 +194,11 @@
 		重写shouldComponentUpdate()方法
 		比较新旧state或props数据, 如果有变化才返回true, 如果没有返回false
 	办法2:  
-		使用PureComponent
+		使用PureComponent 控制检测；
+        shouldComponentUpdate() 返回false，页面值就不会更新；
 		PureComponent重写了shouldComponentUpdate(), 只有state或props数据有变化才返回true
 		注意: 
-			只是进行state和props数据的浅比较, 如果只是数据对象内部数据变了, 返回false  
+			只是 进行state和props数据的浅比较, 如果只是数据对象内部数据变了, 返回false  
 			不要直接修改state数据, 而是要产生新数据
 	项目中一般使用PureComponent来优化
 

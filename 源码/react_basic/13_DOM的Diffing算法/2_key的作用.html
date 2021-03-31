@@ -99,8 +99,12 @@
 
 		add = ()=>{
 			const {persons} = this.state
-			const p = {id:persons.length+1,name:'小王',age:20}
-			this.setState({persons:[p,...persons]})
+			const p = {id:persons.length+1, name:'小王',age:20}
+			// this.setState({persons:[p,...persons]})
+
+            // 若果使用了 PureComponent 下面的方法会失败，出现问题；PureComponent只会对数据进行浅比较；== 会成立；
+            persons.unshift(p);
+			this.setState({persons:persons})
 		}
 
 		render(){

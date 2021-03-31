@@ -9,17 +9,20 @@ export default class Parent extends PureComponent {
 		/* const {stus} = this.state
 		stus.unshift('小刘')
 		this.setState({stus}) */
+        // 为什么不推荐使用 push 和 unshift
 
 		const {stus} = this.state
 		this.setState({stus:['小刘',...stus]})
+        // 为了组件能够执行一次 render()
+        // this.setState({});
 	}
 
 	changeCar = ()=>{
 		//this.setState({carName:'迈巴赫'})
 
 		const obj = this.state
-		obj.carName = '迈巴赫'
-		console.log(obj === this.state);
+		obj.carName = '迈巴赫'; // obj 和 this.state 是一个内存地址；
+		console.log(obj === this.state); // true;
 		this.setState(obj)
 	}
 

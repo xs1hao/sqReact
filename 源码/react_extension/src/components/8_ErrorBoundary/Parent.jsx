@@ -7,6 +7,16 @@ export default class Parent extends Component {
 		hasError:'' //用于标识子组件是否产生错误
 	}
 
+    /**
+     * 
+     * 注意 ====>> 错误边界无法捕获以下场景中产生的错误：
+     * 1、事件处理（了解更多）
+     * 2、异步代码（例如 setTimeout 或 requestAnimationFrame 回调函数）
+     * 3、服务端渲染
+     * 4、它自身抛出来的错误（并非它的子组件）
+     * 
+     * */
+
 	//当Parent的子组件出现报错时候，会触发getDerivedStateFromError调用，并携带错误信息； Derived 衍生的；
 	static getDerivedStateFromError(error){
 		console.log('@@@',error);
